@@ -20,7 +20,7 @@ imagenet_labels = np.array(open(labels_path).read().splitlines())
     'cats_vs_dogs',
     with_info=True,
     as_supervised=True,
-    split=['train', 'train'],
+    split=['train[:80%]', 'train[80%:]'],
 )
 
 num_examples = info.splits['train'].num_examples
